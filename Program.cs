@@ -1,9 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using System.IO;
 
 
 
 void ParseWaxFile (string waxFilePath) {
-	Console.WriteLine($"Filepath: {waxFilePath}");
+	if (!File.Exists(waxFilePath)) {
+		Console.WriteLine($"Not found: {waxFilePath}");
+		return;
+	}
+
+	Console.WriteLine($"Found: {waxFilePath}");
 }
 
 if (args.Length > 0) {
