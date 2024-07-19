@@ -1,6 +1,9 @@
 
 build/
 
+bin/
+obj/
+
 *.o
 *.exe
 waxc
